@@ -4,3 +4,274 @@
 *:after {
   box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background: url(/images/site/small_check.jpg);
+  background-size: cover;
+  margin: 0;
+}
+
+  main {
+    position: relative;
+    z-index: -999;
+  }
+
+  .landing {
+    margin: 20px 20%;
+    background-color: #fff;
+    border: solid 3px #00c6d8;
+    border-radius: 20px;
+    height: auto;
+    width: 60%;
+  }
+
+  nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15%;
+    width: 100%;
+    margin: 0;
+  }
+
+  nav ul {
+    color: white;
+    display: flex;
+    margin: 0 21%;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  nav li:hover {
+    cursor: pointer;
+    background-color: #777777;
+    color: #fff;
+  }
+
+  nav li {
+    width: 95%;
+    padding: 10px;
+    text-align: center;
+    background-color: #121212;
+    font-size: 1em;
+    font-family: 'Roboto', 'Arial';
+    transition: all 0.15s ease-in-out;
+  }
+
+  .siteName a {
+    position: absolute;
+    font-size: 3rem;
+    top: 5%;
+    left: 22%;
+    font-family: 'Roboto', 'Arial';
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  #tools a {
+    position: absolute;
+    top: 6%;
+    right: 22%;
+    font-family: 'Roboto', 'Arial';
+    text-decoration: none;
+    color: black;
+  }
+
+  .welcome {
+    position: absolute;
+    top: 20%;
+    margin-left: 2%;
+    font-size: 2.8rem;
+    font-family: 'Roboto', 'Arial';
+
+  }
+
+  .delorean img {
+    z-index: 0;
+    width: 80%;
+    margin: 25% 0 0 20%;
+  }
+
+  .features {
+    font-family: 'Roboto', 'Arial';
+    padding: 10px 20px;
+    list-style-type: none;
+    background-color: #ffffff72;
+    color: #00c6d8;
+    position: absolute;
+    top: 27%;
+    left: 25%;
+    font-size: 2rem;
+  }
+
+  .features h3 {
+    text-align: left;
+  }
+
+  .features button {
+    background-color: #00c6d8;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .upgradesContainer {
+    font-family: 'Roboto', 'Arial';
+    text-align: center;
+    margin: 80px 0px 0 40px;
+    width: 40%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 90px;
+  }
+
+  .grid-container img{
+    height: 50px;
+    max-width: auuto;
+    background-color: #00c6d8;
+    padding: 5px 50px;
+    margin: 0 10px;
+  }
+
+  .grid-item a {
+    display: block;
+    margin: 10px;
+    font-size: 1.1em
+  }
+
+  .reviews {
+    font-family: 'Roboto', 'Arial';
+    text-align: center;
+  }
+
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 20px;
+}
+
+.reviews ul {
+    padding-left: 0;
+}
+
+.reviews li {
+    text-align: left;
+    margin: 20px;
+}
+
+footer {
+  position: absolute;
+  left: 21%;
+  top: 128%;
+}
+
+@media (max-width: 499px) {
+  body {
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    top: 40px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    flex-grow: 1;
+    font-size: 0.8em;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .landing {
+    margin: 0;
+    border: none;
+    width: 100%;
+  }
+
+  .siteName a {
+    position: absolute;
+    font-size: 1.8rem;
+    top: 5px;
+    left: 10px;
+  }
+
+  #tools a {
+    top: 5px;
+    right: 10px
+  }
+
+  .welcome {
+    top: 8%;
+    font-size: 1.6rem;
+    left: 10px;
+    margin: 0;
+  }
+
+  .delorean img {
+    width: 100%;
+    margin: 50% 0;
+  }
+
+  .features {
+    font-size: 1.2rem;
+    color: black;
+    left: 10px;
+    top: 10%;
+    width: 50%;
+  }
+
+  .content-wrapper {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .reviews {
+    position: absolute;
+    top: 45%;
+  }
+
+  .reviews ul {
+    padding-left: 20px;
+    list-style: none;
+  }
+
+  .reviews li {
+    margin: 10px 0;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: auto;
+    justify-items: center;
+    margin: 0;
+  }
+
+  .upgradesContainer {
+    margin-bottom: 50px;
+  }
+
+  footer {
+    position: fixed;
+    left: 5%;
+    top: auto;
+    bottom: 0;
+  }
+}
