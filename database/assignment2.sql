@@ -1,34 +1,34 @@
--- Record for Tony
+-- Insert record
 
-INSERT INTO account (first_name, last_name, email, password)
+INSERT INTO public.account (account_firstname, account_lastname, account_email, account_password)
 VALUES ('Tony', 'Stark', 'tony@starknet.com', 'Iam1ronM@n');
 
--- set account type
+-- Update account
 
-UPDATE account
+UPDATE public.account
 SET account_type = 'Admin'
-WHERE email = 'tony@starknet.com';
+WHERE account_email = 'tony@starknet.com';
 
--- delete record
+-- Delete record
 
-DELETE FROM account
-WHERE email = 'tony@starknet.com';
+DELETE FROM public.account
+WHERE account_email = 'tony@starknet.com';
 
--- update description
+-- Update record
 
-UPDATE inventory
+UPDATE public.inventory
 SET inv_description = REPLACE(inv_description, 'small interiors', 'a huge interior')
-WHERE make 'GM' AND model = "Hummer";
+WHERE inv_make = 'GM' AND inv_model = 'Hummer';
 
--- category
+-- Select car
 
-SELECT i.make, i.model, c.classification_name
-FROM inventory i
-INNER JOIN classification c ON i.classification_id = c.classification_id
-WHERE c.classification_name = 'Sport';
+SELECT inv.inv_make, inv.inv_model, cls.classification_name
+FROM public.inventory inv
+INNER JOIN public.classification cls ON inv.classification_id = cls.classification_id
+WHERE cls.classification_name = "Sport";
 
--- update records
+-- Update inventory
 
-UPDATE inventory
-SET inv_image = REPLACE(inv_image, '/images/', '/images/vehicles/'),
-    inv_thumbnail = REPLACE(inv_thumbnail, '/images/', '/images/vehicles/');
+UPDATE public.inventory
+SET inv_image = REPLACE(inv_image, 'public/images/', 'public/images/vehicles/'),
+    inv_thumbnail = REPLACE(inv_thumbnail, 'public/images/', 'public/images/vehicles/');
